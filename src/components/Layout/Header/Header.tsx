@@ -10,11 +10,11 @@ const Header = (props: IHeader) => {
   return (
     <div css={headerStyle}>
       <div>
-        <div>JUNHYUCK.COM</div>
+        <h2>KJH.COM</h2>
       </div>
-      <nav css={navStyle}>
+      <nav>
         <ul css={ulStyle}>
-          <li onClick={() => onGocontent(0)}>About</li>
+          <li onClick={() => onGocontent(0)}>About ME</li>
           <li onClick={() => onGocontent(1)}>Project</li>
           <li onClick={() => onGocontent(2)}>Contanct</li>
         </ul>
@@ -23,22 +23,25 @@ const Header = (props: IHeader) => {
   );
 };
 
-const navStyle = css`
-  width: 30%;
-`;
 const ulStyle = css`
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   cursor: pointer;
+  li {
+    margin-left: 30px;
+  }
 `;
+
 const headerStyle = css`
   position: fixed;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   left: 0;
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: #dde0ea;
+  box-sizing: border-box;
+  padding: 0px 40px;
 `;
 export default Header;
