@@ -43,6 +43,8 @@ const AboutSecond = () => {
     font-size: 4rem;
     text-align: center;
     color: white;
+    line-height: 8rem;
+    font-weight: bold;
     &.large {
       font-size: 5rem;
       font-weight: bold;
@@ -50,14 +52,24 @@ const AboutSecond = () => {
       padding: 0.5rem 2rem;
       border-radius: 1rem;
       margin-bottom: 9.6rem;
-      color: var(--PRIMARY);
     }
+  `;
+
+  const strongStyle = css`
+    width: auto;
+    font-size: 4rem;
+    text-align: center;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
   `;
 
   const divBoxStyle = css`
     height: 100vh;
     width: 100%;
-    background-color: pink;
+    background-color: black;
     position: sticky;
     top: 0;
     left: 0;
@@ -75,8 +87,31 @@ const AboutSecond = () => {
   `;
 
   const combinedStyles = css`
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: all 0.5s;
+    background-color: black;
+    width: 100%;
+    height: 10vh;
     ${isSecondSectionSeen ? fadeInStyles : fadeOutStyles};
+  `;
+
+  const btnStyle = css`
+    background-color: white;
+    width: 90%;
+    height: 6vh;
+    border-radius: 10px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
   `;
 
   return (
@@ -84,16 +119,13 @@ const AboutSecond = () => {
       <section css={sectionStyle}>
         <div css={divContainerStyle}>
           <span css={spanStyle}>무궁무진한</span>
-          <span css={spanStyle}>신입개발자 김준혁에 대해</span>
+          <div css={strongStyle}>신입개발자 김준혁에 대해</div>
           <span css={[spanStyle, "large"]}>더 알고 싶다면</span>
         </div>
         <div css={divBoxStyle} ref={setTargetSecondSection}></div>
       </section>
-
       <div css={combinedStyles}>
-        <button>
-          <h2>더 보러가기</h2>
-        </button>
+        <div css={btnStyle}>더 보러가기</div>
       </div>
     </>
   );

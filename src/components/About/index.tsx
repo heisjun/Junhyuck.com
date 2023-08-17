@@ -5,27 +5,26 @@ import React, { useState } from "react";
 
 import MainFirstSectionTimer from "components/MainFirstSectionTimer";
 import useObserver from "hooks/useObserver";
-export const INTRODUCE_TEXT_ARR = [
+
+const INTRODUCE_TEXT_ARR = [
   {
     id: 0,
-    content: "어떤",
+    content: " ??? ",
   },
   {
     id: 1,
     content: "프론트엔드",
-    imgSrc:
-      "https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202303/023134-934/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%95%98%EB%8A%94-%EC%9D%BC1.png",
+    imgSrc: "/img1.png",
   },
   {
     id: 2,
     content: "새로운 기술을 배우는 것을 좋아하는",
-    imgSrc:
-      "https://storage.googleapis.com/static.fastcampus.co.kr/prod/uploads/202303/023134-934/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%95%98%EB%8A%94-%EC%9D%BC1.png",
+    imgSrc: "img2.jpeg",
   },
   {
     id: 3,
     content: "커뮤니케이션의 중요성을 아는",
-    imgSrc: "https://idol-service.com/img/22.jpg",
+    imgSrc: "img3.png",
   },
   {
     id: 4,
@@ -86,15 +85,15 @@ const MainFirstSection = () => {
   const nameTextStyle = css`
     position: absolute;
     font-weight: bold;
-    top: calc(50% - 18px - 64px);
-    font-size: 2.25rem;
+    top: calc(50% - 18px - 74px);
+    font-size: 3rem;
     line-height: 2.5rem;
   `;
 
   const primaryTextStyle = css`
     position: absolute;
-    top: calc(50% - 18px + 64px);
-    font-size: 2.5rem;
+    top: calc(50% - 18px + 84px);
+    font-size: 3rem;
     font-weight: bold;
   `;
 
@@ -126,12 +125,12 @@ const MainFirstSection = () => {
     top: calc(50% - 32px);
 
     padding: 0.5rem 1rem;
-    background-color: pink;
+    background-color: rgb(246 66 128);
     border-radius: 0.5rem;
   `;
 
   const textStyle = css`
-    font-size: 3rem;
+    font-size: 3.25rem;
     font-weight: bold;
     color: #fff;
   `;
@@ -146,7 +145,7 @@ const MainFirstSection = () => {
           transition: "opacity 0.2s",
         }}
       >
-        <span css={nameTextStyle}>김준혁은</span>
+        <span css={nameTextStyle}>저는</span>
         {INTRODUCE_TEXT_ARR.map((item, index) => {
           return (
             <div key={item.id} css={mapDivStyle}>
@@ -173,7 +172,7 @@ const MainFirstSection = () => {
             </div>
           );
         })}
-        <span css={primaryTextStyle}>개발자</span>
+        <span css={primaryTextStyle}>개발자 입니다</span>
       </div>
       <div>
         {INTRODUCE_TEXT_ARR.map((item, index) => {
