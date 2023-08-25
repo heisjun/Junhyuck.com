@@ -5,25 +5,20 @@ import Header from "./Header/Header";
 
 interface ILayout {
   children: React.ReactNode;
-  onGocontent: (index: number) => void;
 }
 
 const Layout = (props: ILayout) => {
-  const { children, onGocontent } = props;
+  const { children } = props;
   return (
     <div css={divStyle}>
-      <Header onGocontent={onGocontent} />
+      <Header />
       <main css={mainStyle}>{children}</main>
       <Footer />
     </div>
   );
 };
 
-const divStyle = css`
-  margin-top: 80px;
-`;
+const divStyle = css``;
 
-const mainStyle = css`
-  min-height: calc(100vh - 180px);
-`;
+const mainStyle = css``;
 export default Layout;

@@ -41,11 +41,6 @@ const INTRODUCE_TEXT_ARR = [
     content: "물어볼 줄 아는",
     imgSrc: "https://idol-service.com/img/86.jpg",
   },
-  {
-    id: 7,
-    content: "사용자 친화적인 서비스를 만들고 싶은6",
-    imgSrc: "https://idol-service.com/img/86.jpg",
-  },
 ];
 
 const MainFirstSection = () => {
@@ -64,7 +59,7 @@ const MainFirstSection = () => {
   });
 
   const sectionStyle = css`
-    height: 600vh;
+    height: 500vh;
     width: 100%;
     position: relative;
   `;
@@ -123,7 +118,6 @@ const MainFirstSection = () => {
   const textBoxStyle = css`
     position: absolute;
     top: calc(50% - 32px);
-
     padding: 0.5rem 1rem;
     background-color: rgb(246 66 128);
     border-radius: 0.5rem;

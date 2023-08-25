@@ -3,9 +3,11 @@ import { css } from "@emotion/react";
 
 import React, { useState } from "react";
 import useObserver from "hooks/useObserver";
+import { useNavigate } from "react-router-dom";
 
 const AboutSecond = () => {
   const [isSecondSectionSeen, setIsSecondSectionSeen] = useState(false);
+  const navigate = useNavigate();
 
   const onIntersectSecondSection: IntersectionObserverCallback = ([entry]) => {
     entry.isIntersecting
@@ -98,6 +100,7 @@ const AboutSecond = () => {
     background-color: black;
     width: 100%;
     height: 10vh;
+    cursor: pointer;
     ${isSecondSectionSeen ? fadeInStyles : fadeOutStyles};
   `;
 
@@ -112,6 +115,9 @@ const AboutSecond = () => {
     align-items: center;
     font-weight: bold;
     color: black;
+    :hover {
+      background-color: gray;
+    }
   `;
 
   return (
@@ -124,7 +130,7 @@ const AboutSecond = () => {
         </div>
         <div css={divBoxStyle} ref={setTargetSecondSection}></div>
       </section>
-      <div css={combinedStyles}>
+      <div css={combinedStyles} onClick={() => navigate("/ProjectList")}>
         <div css={btnStyle}>더 보러가기</div>
       </div>
     </>
