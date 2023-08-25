@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import About from "components/About";
 import AboutSecond from "components/AboutSecond";
 import Lottie from "lottie-react";
@@ -8,6 +8,7 @@ import lottieScroll from "assets/image/3aM6pLo3nl.json";
 import lottieComputer from "assets/image/animation_lldr6qq9.json";
 import useObserver from "hooks/useObserver";
 import Header from "components/Layout/Header/Header";
+import GlitchText from "components/GlitchText";
 
 function MainPage() {
   const [isInViewport, setIsInViewport] = useState(false);
@@ -48,15 +49,17 @@ function MainPage() {
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 5em;
+    font-size: 5vw;
     font-weight: bold;
+    font-family: "Montserrat", sans-serif;
     ${isInViewport ? fadeInStyles : fadeOutStyles};
   `;
 
   const textStyle = css`
     color: white;
-    font-size: 5em;
+    font-size: 5vw;
     ${isInViewport ? fadeInStyles : fadeOutStyles};
+    font-family: "Montserrat", sans-serif;
   `;
 
   const logoImgStyle = css`
@@ -86,27 +89,27 @@ function MainPage() {
   });
 
   return (
-    <>
-      <div css={mainContainerStyle}>
-        <section css={sectionStyle}>
-          <Header />
-          <div css={mainBlockStyle}>
-            <div css={logoImgStyle}>
-              <Lottie animationData={lottieComputer} />
-            </div>
-            <span css={textStyle}>HELLO :)</span>
-            <div css={decoStyle} ref={ref}>
-              I'M KIMJUNHYUCK
-            </div>
-            <div css={scrollLottieStyle}>
-              <Lottie animationData={lottieScroll} />
-            </div>
+    <div css={mainContainerStyle}>
+      <section css={sectionStyle}>
+        <Header />
+        <div css={mainBlockStyle}>
+          <div css={logoImgStyle}>
+            <Lottie animationData={lottieComputer} />
           </div>
-        </section>
-        <About />
-        <AboutSecond />
-      </div>
-    </>
+          <span css={textStyle}>
+            <GlitchText text="HELLO :)" />
+          </span>
+          <div css={decoStyle} ref={ref}>
+            <GlitchText text="I'M KIMJUNHYUCK" />
+          </div>
+          <div css={scrollLottieStyle}>
+            <Lottie animationData={lottieScroll} />
+          </div>
+        </div>
+      </section>
+      <About />
+      <AboutSecond />
+    </div>
   );
 }
 
@@ -125,7 +128,7 @@ const mainBlockStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  top: 20vh;
   position: relative;
   height: 100%;
 `;
