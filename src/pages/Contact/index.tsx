@@ -65,13 +65,6 @@ const Contact = () => {
       },
     };
 
-    const topBoundary = Matter.Bodies.rectangle(
-      canvasWidth / 2,
-      0,
-      canvasWidth,
-      1,
-      boundaryOptions
-    );
     const leftBoundary = Matter.Bodies.rectangle(
       0,
       canvasHeight / 2,
@@ -86,76 +79,72 @@ const Contact = () => {
       canvasHeight,
       boundaryOptions
     );
-    Matter.World.add(world, [topBoundary, leftBoundary, rightBoundary]);
+    Matter.World.add(world, [leftBoundary, rightBoundary]);
 
     const circle = Matter.Bodies.circle(canvasWidth / 4, canvasHeight / 2, 100);
     shapes.push(circle);
 
-    const rectangle = Matter.Bodies.rectangle(
-      (canvasWidth / 4.5) * 2,
-      200,
-      200,
-      200
-    );
-    shapes.push(rectangle);
+    const rectangle2 = Matter.Bodies.rectangle(canvasWidth * 0.6, 60, 180, 180);
 
-    const rectangle1 = Matter.Bodies.rectangle(
-      (canvasWidth / 4) * 2,
-      0,
-      200,
-      200
-    );
-    shapes.push(rectangle1);
-    const rectangle2 = Matter.Bodies.rectangle(
-      (canvasWidth / 4.5) * 3,
-      200,
-      200,
-      200
-    );
     shapes.push(rectangle2);
-    const rectangle4 = Matter.Bodies.rectangle(
-      (canvasWidth / 4.5) * 4,
-      200,
-      200,
-      200
-    );
-    shapes.push(rectangle4);
 
-    const rectangle5 = Matter.Bodies.rectangle(
-      (canvasWidth / 4.2) * 4,
-      50,
-      200,
-      200
+    const rectangle2_1 = Matter.Bodies.rectangle(
+      canvasWidth * 0.65,
+      -120,
+      180,
+      180
     );
-    shapes.push(rectangle5);
 
-    const rectangle6 = Matter.Bodies.rectangle(
+    shapes.push(rectangle2_1);
+    const rectangle2_2 = Matter.Bodies.rectangle(
+      canvasWidth * 0.63,
+      270,
+      180,
+      180
+    );
+
+    shapes.push(rectangle2_2);
+
+    const rectangle2_3 = Matter.Bodies.rectangle(
+      canvasWidth * 0.6,
+      500,
+      180,
+      180
+    );
+
+    shapes.push(rectangle2_3);
+
+    const rectangle3 = Matter.Bodies.rectangle(
       (canvasWidth / 4) * 3,
-      30,
+      10,
+      180,
+      180
+    );
+    shapes.push(rectangle3);
+
+    const rectangle3_1 = Matter.Bodies.rectangle(
+      (canvasWidth / 3.9) * 3,
+      -190,
+      180,
+      180
+    );
+    shapes.push(rectangle3_1);
+
+    const rectangle3_2 = Matter.Bodies.rectangle(
+      (canvasWidth / 4.1) * 3,
       200,
-      200
-    );
-    shapes.push(rectangle6);
-
-    const trapezoid = Matter.Bodies.trapezoid(
-      canvasWidth / 4,
-      canvasHeight / 2,
       180,
-      180,
-      0.5
-    ); // 사다리꼴
-    shapes.push(trapezoid);
-
-    const pentagon = Matter.Bodies.polygon(
-      (canvasWidth / 4) * 5,
-      canvasHeight / 2,
-      100,
-      50,
-      {
-        render: { fillStyle: "#FF5733" }, // 색상 변경
-      }
+      180
     );
-    shapes.push(pentagon);
+    shapes.push(rectangle3_2);
+
+    const rectangle3_3 = Matter.Bodies.rectangle(
+      (canvasWidth / 4.5) * 3,
+      400,
+      180,
+      180
+    );
+    shapes.push(rectangle3_3);
 
     Matter.World.add(world, shapes);
 
@@ -216,12 +205,13 @@ const containerStyle = css`
 const textContainerStyle = css`
   display: flex;
   flex-direction: column;
-  padding: 200px;
+  padding: 100px;
 `;
 
 const textStyle = css`
-  font-weight: bold;
   font-size: 2.5rem;
+  line-height: 150%;
+  font-family: "Black Han Sans", sans-serif;
 `;
 
 const iconStyle = css`
@@ -229,5 +219,7 @@ const iconStyle = css`
   height: 5rem;
   cursor: pointer;
   color: lightgray;
+  padding-right: 1rem;
+  padding-top: 1rem;
 `;
 export default Contact;
