@@ -1,9 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
+import SideBar from "components/SideBar";
 const Header = () => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggleSide = () => {
+    setIsOpen(true);
+  };
+
   return (
     <div css={headerStyle}>
       <div>
@@ -17,16 +24,31 @@ const Header = () => {
           <li onClick={() => navigate("/ProjectList")}>Project</li>
           <li onClick={() => navigate("/Contact")}>Contanct</li>
         </ul>
+        <div css={hambugBtnStyle}>
+          <RxHamburgerMenu onClick={toggleSide} />
+        </div>
       </nav>
+      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };
 
+const hambugBtnStyle = css`
+  display: none;
+  color: white;
+  @media (max-width: 768px) {
+    display: contents;
+    font-size: 40px;
+  }
+`;
 const h2Style = css`
   cursor: pointer;
   font-family: "Black Han Sans", sans-serif;
 `;
 const ulStyle = css`
+  @media (max-width: 768px) {
+    display: none;
+  }
   display: flex;
   justify-content: end;
   font-family: "Black Han Sans", sans-serif;
