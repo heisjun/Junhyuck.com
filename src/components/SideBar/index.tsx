@@ -33,7 +33,7 @@ const SideBar = (props: ISideBar) => {
       </div>
       <ul css={ulStyle}>
         <li onClick={() => navigate("/")}>About ME</li>
-        <li onClick={() => navigate("/ProjectList")}>Web</li>
+        <li onClick={() => navigate("/Web")}>Web</li>
         <li onClick={() => navigate("/Mobile")}>Mobile</li>
         <li onClick={() => navigate("/Contact")}>Contanct</li>
       </ul>
