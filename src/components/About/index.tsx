@@ -29,17 +29,14 @@ const INTRODUCE_TEXT_ARR = [
   {
     id: 4,
     content: "사용자 친화적인 서비스를 만들고 싶은",
-    imgSrc: "https://idol-service.com/img/86.jpg",
   },
   {
     id: 5,
     content: "생산성을 높이는 일을 좋아하는",
-    imgSrc: "https://idol-service.com/img/86.jpg",
   },
   {
     id: 6,
     content: "물어볼 줄 아는",
-    imgSrc: "https://idol-service.com/img/86.jpg",
   },
 ];
 
@@ -83,6 +80,10 @@ const MainFirstSection = () => {
     top: calc(50% - 18px - 74px);
     font-size: 3rem;
     line-height: 2.5rem;
+    @media (max-width: 768px) {
+      font-size: 7vw;
+      top: calc(50% - 72px);
+    }
   `;
 
   const primaryTextStyle = css`
@@ -90,6 +91,10 @@ const MainFirstSection = () => {
     top: calc(50% - 18px + 84px);
     font-size: 3rem;
     font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: 7vw;
+      top: calc(50% + 25px);
+    }
   `;
 
   const mapDivStyle = css`
@@ -127,6 +132,9 @@ const MainFirstSection = () => {
     font-size: 3.25rem;
     font-weight: bold;
     color: #fff;
+    @media (max-width: 768px) {
+      font-size: 5.5vw;
+    }
   `;
 
   return (

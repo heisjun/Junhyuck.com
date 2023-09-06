@@ -9,7 +9,7 @@ const ProjectItem2 = () => {
     .flip-card {
       background-color: transparent;
       width: 40vw;
-      height: 50vw;
+      height: 55vw;
       border: 1px solid #f1f1f1;
       perspective: 1000px;
     }

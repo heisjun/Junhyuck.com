@@ -53,5 +53,3 @@
 }
 
 /* css for my tutorial channel link */
-#tube {position: fixed; bottom: 1vw; right: 1vw; opacity: 0.4;}
-#tube:hover { opacity: 1; } #tube >img { height: 3rem; }

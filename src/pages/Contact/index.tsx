@@ -81,9 +81,6 @@ const Contact = () => {
     );
     Matter.World.add(world, [leftBoundary, rightBoundary]);
 
-    const circle = Matter.Bodies.circle(canvasWidth / 4, canvasHeight / 2, 100);
-    shapes.push(circle);
-
     const rectangle2 = Matter.Bodies.rectangle(canvasWidth * 0.6, 60, 180, 180);
 
     shapes.push(rectangle2);
@@ -206,12 +203,18 @@ const textContainerStyle = css`
   display: flex;
   flex-direction: column;
   padding: 100px;
+  @media (max-width: 768px) {
+    padding: 50px;
+  }
 `;
 
 const textStyle = css`
   font-size: 2.5rem;
   line-height: 150%;
   font-family: "Black Han Sans", sans-serif;
+  @media (max-width: 768px) {
+    font-size: 7vw;
+  }
 `;
 
 const iconStyle = css`
