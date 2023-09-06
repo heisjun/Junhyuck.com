@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Header from "components/Layout/Header/Header";
-import Monitor from "components/Monitor";
-import SkillSet from "components/SkillSet";
 import WebInfoComponent from "components/WebInfoComponent";
 
 const ProjectList = [
