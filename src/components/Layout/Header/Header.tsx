@@ -21,7 +21,8 @@ const Header = () => {
       <nav>
         <ul css={ulStyle}>
           <li onClick={() => navigate("/")}>About ME</li>
-          <li onClick={() => navigate("/ProjectList")}>Project</li>
+          <li onClick={() => navigate("/ProjectList")}>Web</li>
+          <li onClick={() => navigate("/Mobile")}>Mobile</li>
           <li onClick={() => navigate("/Contact")}>Contanct</li>
         </ul>
         <div css={hambugBtnStyle}>
@@ -52,7 +53,7 @@ const ulStyle = css`
   display: flex;
   justify-content: end;
   font-family: "Black Han Sans", sans-serif;
-  font-size: 2.5vw;
+  font-size: 2vw;
   list-style-type: none;
   li {
     cursor: pointer;

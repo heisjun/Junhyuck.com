@@ -19,7 +19,7 @@ const SideBar = (props: ISideBar) => {
       <div
         style={{
           height: 80,
-          paddingRight: 48,
+          paddingRight: 40,
           display: "flex",
           alignItems: "center",
           justifyContent: "end",
@@ -33,7 +33,8 @@ const SideBar = (props: ISideBar) => {
       </div>
       <ul css={ulStyle}>
         <li onClick={() => navigate("/")}>About ME</li>
-        <li onClick={() => navigate("/ProjectList")}>Project</li>
+        <li onClick={() => navigate("/ProjectList")}>Web</li>
+        <li onClick={() => navigate("/Mobile")}>Mobile</li>
         <li onClick={() => navigate("/Contact")}>Contanct</li>
       </ul>
     </div>
