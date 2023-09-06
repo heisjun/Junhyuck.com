@@ -13,7 +13,7 @@ const INTRODUCE_TEXT_ARR = [
   },
   {
     id: 1,
-    content: "프론트엔드",
+    content: "Front-End",
     imgSrc: "/img1.png",
   },
   {
@@ -28,15 +28,19 @@ const INTRODUCE_TEXT_ARR = [
   },
   {
     id: 4,
-    content: "사용자 친화적인 서비스를 만들고 싶은",
+    content: "TypeScript를 좋아하는",
   },
   {
     id: 5,
-    content: "생산성을 높이는 일을 좋아하는",
+    content: "웹표준을 지키려 노력하는",
   },
   {
     id: 6,
-    content: "물어볼 줄 아는",
+    content: "사용자 친화적인 서비스를 만들고 싶은",
+  },
+  {
+    id: 7,
+    content: "인터렉티브한 웹사이트를 만들고 싶은",
   },
 ];
 
@@ -56,7 +60,7 @@ const MainFirstSection = () => {
   });
 
   const sectionStyle = css`
-    height: 500vh;
+    height: 550vh;
     width: 100%;
     position: relative;
   `;

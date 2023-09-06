@@ -54,8 +54,8 @@ function MarqueeText({
       }
       setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
       scrollDir === "scrolling down"
-        ? setCount((prev) => prev + 15)
-        : setCount((prev) => prev - 15);
+        ? setCount((prev) => prev + 20)
+        : setCount((prev) => prev - 20);
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
     };
@@ -90,8 +90,10 @@ const Mobile = () => {
   return (
     <div css={containerStyle}>
       <Header />
-      <div>
-        <div css={textStyle}>
+      <div css={TitleBlockStyle}>
+        <div css={TitleStyle}>MY</div>
+        <div css={TitleStyle}>Application</div>
+        <div css={TextStyle}>
           React-Native 를 이용해 프로젝트의 전체적인 화면 레이아웃 구성 로그인
           페이지를 구현했고, Restful API를 이용한 백엔드 서버와 비동기 통신
           커뮤니티 페이지 구현했습니다. AWS S3 서버에 사진 업로드 기능 구현
@@ -120,17 +122,25 @@ const Mobile = () => {
   );
 };
 
-const textStyle = css`
+const TitleBlockStyle = css`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-  padding: 10%;
-  font-family: "Chosunilbo_myungjo";
+  flex-direction: column;
+  padding: 40px;
+  height: 60vh;
+  box-sizing: border-box;
+  background-color: black;
+`;
+const TitleStyle = css`
+  font-size: 60px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+`;
+
+const TextStyle = css`
   line-height: 150%;
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
+  font-family: "Chosunilbo_myungjo";
+  margin-top: 40px;
+  font-size: 25px;
 `;
 
 const introBoxStyle = css`
@@ -151,6 +161,7 @@ const introTextStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
   font-size: 2vw;
   font-family: "Chosunilbo_myungjo";
   line-height: 150%;
@@ -162,25 +173,23 @@ const btnStyle = css`
   width: auto;
   font-size: 2vw;
   box-sizing: border-box;
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   font-family: "Chosunilbo_myungjo";
   padding: 10px;
-  border-radius: 5px;
   @media (max-width: 768px) {
     font-size: 20px;
   }
   cursor: pointer;
   :hover {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
   }
 `;
 const containerStyle = css`
   width: 100%;
   overflow-x: hidden;
-  background-color: black;
   position: relative;
   color: white;
 `;

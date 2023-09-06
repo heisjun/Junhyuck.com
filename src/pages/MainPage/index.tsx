@@ -53,6 +53,9 @@ function MainPage() {
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     ${isInViewport ? fadeInStyles : fadeOutStyles};
+    @media (max-width: 768px) {
+      font-size: 9vw;
+    }
   `;
 
   const textStyle = css`
@@ -60,13 +63,16 @@ function MainPage() {
     font-size: 5vw;
     ${isInViewport ? fadeInStyles : fadeOutStyles};
     font-family: "Montserrat", sans-serif;
+    @media (max-width: 768px) {
+      font-size: 10vw;
+    }
   `;
 
   const logoImgStyle = css`
     position: absolute;
-    width: 8rem; /* 원래 32px */
-    @media (min-width: 768px) {
-      width: 30rem; /* 원래 40px */
+    width: 30rem; /* 원래 32px */
+    @media (max-width: 768px) {
+      width: 60vw; /* 원래 40px */
     }
     right: 20%;
     margin-top: 1vh;

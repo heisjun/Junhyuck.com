@@ -55,6 +55,10 @@ const AboutSecond = () => {
       border-radius: 1rem;
       margin-bottom: 9.6rem;
     }
+    @media (max-width: 768px) {
+      font-size: 10vw;
+      line-height: 5rem;
+    }
   `;
 
   const strongStyle = css`
@@ -66,6 +70,9 @@ const AboutSecond = () => {
     padding: 10px;
     border-radius: 10px;
     font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: 7vw;
+    }
   `;
 
   const divBoxStyle = css`
@@ -130,7 +137,7 @@ const AboutSecond = () => {
         </div>
         <div css={divBoxStyle} ref={setTargetSecondSection}></div>
       </section>
-      <div css={combinedStyles} onClick={() => navigate("/ProjectList")}>
+      <div css={combinedStyles} onClick={() => navigate("/Web")}>
         <div css={btnStyle}>더 보러가기</div>
       </div>
     </>
