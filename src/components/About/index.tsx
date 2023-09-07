@@ -14,17 +14,14 @@ const INTRODUCE_TEXT_ARR = [
   {
     id: 1,
     content: "Front-End",
-    imgSrc: "/img1.png",
   },
   {
     id: 2,
     content: "새로운 기술을 배우는 것을 좋아하는",
-    imgSrc: "img2.jpeg",
   },
   {
     id: 3,
     content: "커뮤니케이션의 중요성을 아는",
-    imgSrc: "img3.png",
   },
   {
     id: 4,
@@ -155,17 +152,6 @@ const MainFirstSection = () => {
         {INTRODUCE_TEXT_ARR.map((item, index) => {
           return (
             <div key={item.id} css={mapDivStyle}>
-              {item.imgSrc && (
-                <img
-                  alt={item.content}
-                  src={item.imgSrc}
-                  css={mapImgStyle}
-                  style={{
-                    opacity: currentIndex === index ? 0.2 : 0,
-                    transition: "opacity 0.3s",
-                  }}
-                />
-              )}
               <div
                 css={textBoxStyle}
                 style={{

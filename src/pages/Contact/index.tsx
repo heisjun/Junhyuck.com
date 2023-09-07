@@ -153,7 +153,7 @@ const Contact = () => {
     Matter.World.add(world, mouseConstraint);
 
     // 애니메이션 루프 시작
-    Matter.Engine.run(engine);
+    Matter.Runner.run(engine);
     Matter.Render.run(render);
 
     return () => {

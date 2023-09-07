@@ -13,7 +13,7 @@ const ProjectList = [
   },
   {
     title: "KJH.COM",
-    info: "리액트와 타입스크립트를 이용하여 내 포트폴리오 웹 사이트를 제작했습니다. 인터렉티브한 웹을 만들기위해 다양한 효과들을 넣었고 배포까지 진행함",
+    info: "리액트와 타입스크립트를 이용하여 포트폴리오 웹 사이트를 제작했습니다. 인터렉티브한 웹을 만들기위해 MatterJs를 비롯한 다양한 CSS효과들을 이용해 제작했습니다. 미디어 쿼리를 이용하여 모바일뷰과와 웹뷰를 다르게 설정하여 크로스 플랫폼이 가능하게 제작했습니다. 배포까지 진행함",
     link: "https://placid-dragonfly-b6b.notion.site/Gardner-s-Club-e10a62d08e1043b392cb755456e31f7a",
     img: "website2.png",
     skills: ["React", "TypeScript", "emotino", "matterJS"],
@@ -37,7 +37,7 @@ const Web = () => {
       </div>
       {ProjectList.map((project, idx) => {
         return (
-          <div css={ProjectListContainerStyle}>
+          <div css={ProjectListContainerStyle} key={idx}>
             <div css={ProjectListBox}>
               <WebInfoComponent
                 title={project.title}

@@ -26,7 +26,11 @@ const WebInfoComponent = (props: IWebComponent) => {
         }}
       >
         {skills.map((item, idx) => {
-          return <TagBtn>{item}</TagBtn>;
+          return (
+            <div key={idx}>
+              <TagBtn>{item}</TagBtn>
+            </div>
+          );
         })}
       </div>
       <div css={TextStyle}>{info}</div>
