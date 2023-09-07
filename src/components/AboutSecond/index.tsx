@@ -131,7 +131,7 @@ const AboutSecond = () => {
     <>
       <section css={sectionStyle}>
         <div css={divContainerStyle}>
-          <span css={spanStyle}>무궁무진한</span>
+          <span css={spanStyle}>앞으로가 궁굼한</span>
           <div css={strongStyle}>신입개발자 김준혁에 대해</div>
           <span css={[spanStyle, "large"]}>더 알고 싶다면</span>
         </div>

@@ -129,6 +129,10 @@ const TitleBlockStyle = css`
   height: 60vh;
   box-sizing: border-box;
   background-color: black;
+  @media (max-width: 1000px) {
+    height: auto;
+    padding-bottom: 80px;
+  }
 `;
 const TitleStyle = css`
   font-size: 60px;
@@ -141,6 +145,9 @@ const TextStyle = css`
   font-family: "Chosunilbo_myungjo";
   margin-top: 40px;
   font-size: 25px;
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
 `;
 
 const introBoxStyle = css`
@@ -154,6 +161,7 @@ const introBoxStyle = css`
   line-height: 150%;
   @media (max-width: 768px) {
     font-size: 20px;
+    line-height: 180%;
   }
 `;
 
@@ -167,6 +175,7 @@ const introTextStyle = css`
   line-height: 150%;
   @media (max-width: 768px) {
     font-size: 20px;
+    margin-bottom: 20px;
   }
 `;
 const btnStyle = css`
