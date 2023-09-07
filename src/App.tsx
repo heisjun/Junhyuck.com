@@ -12,6 +12,7 @@ function App() {
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Mobile" element={<Mobile />} />
       <Route path="/Web" element={<Web />} />
+      <Route path="/*" element={<MainPage />} />
     </Routes>
   );
 }
