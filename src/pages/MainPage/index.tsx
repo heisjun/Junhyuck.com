@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import About from "components/About";
 import AboutSecond from "components/AboutSecond";
 import Lottie from "lottie-react";
