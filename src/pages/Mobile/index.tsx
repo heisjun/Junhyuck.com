@@ -1,15 +1,17 @@
 /** @jsxImportSource @emotion/react */
+import "../../App.css";
 import { css } from "@emotion/react";
+import Footer from "components/Layout/Footer/Footer";
 import Header from "components/Layout/Header/Header";
 import { useRef, useState, useEffect } from "react";
 
 const ImgData1: string[] = [];
-for (let i = 1; i <= 8; i++) {
+for (let i = 1; i <= 16; i++) {
   ImgData1.push(`web${i}.png`);
 }
 
 const ImgData2: string[] = [];
-for (let i = 9; i <= 16; i++) {
+for (let i = 1; i <= 16; i++) {
   ImgData2.push(`web${i}.png`);
 }
 
@@ -118,6 +120,7 @@ const Mobile = () => {
         </div>
       </div>
       <MarqueeText direction={1} imgData={ImgData2} isRight={false} />
+      <Footer title="Contact" link="../Contact" />
     </div>
   );
 };

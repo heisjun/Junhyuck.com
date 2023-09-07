@@ -13,7 +13,6 @@ const Layout = (props: ILayout) => {
     <div css={divStyle}>
       <Header />
       <main css={mainStyle}>{children}</main>
-      <Footer />
     </div>
   );
 };
