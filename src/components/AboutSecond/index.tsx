@@ -122,6 +122,7 @@ const AboutSecond = () => {
     align-items: center;
     font-weight: bold;
     color: black;
+    padding: 5px;
     :hover {
       background-color: gray;
     }

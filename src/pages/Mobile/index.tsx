@@ -110,7 +110,7 @@ const Mobile = () => {
               handleOpenNewTab("https://github.com/heisjun/Project_mountain")
             }
           >
-            Source Code
+            More View
           </div>
         </div>
         <MarqueeText direction={1} imgData={ImgData2} isRight={false} />
@@ -136,6 +136,9 @@ const TitleStyle = css`
   font-size: 60px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
 `;
 
 const TextStyle = css`

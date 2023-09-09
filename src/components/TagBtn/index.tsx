@@ -26,8 +26,9 @@ const ContainerStyle = css`
   padding: 0.5vw;
   margin-right: 0.7vw;
   font-size: 1vw;
+  font-family: "Chosunilbo_myungjo";
   @media (max-width: 1000px) {
-    font-size: 1rem;
+    font-size: 13px;
     padding: 5px 10px;
   }
 `;
