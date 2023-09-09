@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideBar from "components/SideBar";
 const Header = () => {
   const navigate = useNavigate();
@@ -10,6 +10,14 @@ const Header = () => {
   const toggleSide = () => {
     setIsOpen(true);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isOpen]);
 
   return (
     <div css={headerStyle}>

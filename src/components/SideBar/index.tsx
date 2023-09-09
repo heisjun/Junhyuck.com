@@ -43,9 +43,9 @@ const SideBar = (props: ISideBar) => {
 
 const SideBarWrap = css`
   box-sizing: border-box;
-  z-index: 5;
+  z-index: 20;
   background-color: black;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   right: -100%;
   top: 0;
