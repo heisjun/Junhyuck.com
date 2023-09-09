@@ -40,39 +40,32 @@ function MarqueeText({
     return () => cancelAnimationFrame(animationFrame);
   }, [count, direction]);
 
-  const [scrollDir, setScrollDir] = useState("scrolling down");
-
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState("");
   useEffect(() => {
-    const threshold = 0;
-    let lastScrollY = window.pageYOffset;
-    let ticking = false;
+    function handleScroll() {
+      const currentScrollTop = window.scrollY;
 
-    const updateScrollDir = () => {
-      const scrollY = window.pageYOffset;
-
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
-        ticking = false;
-        return;
+      if (currentScrollTop > lastScrollTop) {
+        setScrollDirection("down");
+      } else if (currentScrollTop < lastScrollTop) {
+        setScrollDirection("up");
       }
-      setScrollDir(scrollY > lastScrollY ? "scrolling down" : "scrolling up");
-      scrollDir === "scrolling down"
+      scrollDirection === "down"
         ? setCount((prev) => prev + 20)
         : setCount((prev) => prev - 20);
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-      ticking = false;
+
+      setLastScrollTop(currentScrollTop);
+    }
+
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener("scroll", handleScroll);
+
+    // 컴포넌트가 언마운트될 때 이벤트 리스너를 제거해야 합니다.
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollDir]);
+  }, [lastScrollTop, scrollDirection]);
 
   return (
     <div ref={elementRef}>
@@ -104,22 +97,24 @@ const Mobile = () => {
           이용하여 산 정보페이지 구현했습니다.
         </div>
       </div>
-      <MarqueeText direction={-1} imgData={ImgData1} isRight={true} />
-      <div css={introBoxStyle}>
-        <div css={introTextStyle}>
-          산에 대한 다양한 정보를 제공하고 등산 배지를 모으며 도전 과제를 통해
-          성취감을 주고 이용자의 등산 기록을 관리한다.
+      <div>
+        <MarqueeText direction={-1} imgData={ImgData1} isRight={true} />
+        <div css={introBoxStyle}>
+          <div css={introTextStyle}>
+            산에 대한 다양한 정보를 제공하고 등산 배지를 모으며 도전 과제를 통해
+            성취감을 주고 이용자의 등산 기록을 관리한다.
+          </div>
+          <div
+            css={btnStyle}
+            onClick={() =>
+              handleOpenNewTab("https://github.com/heisjun/Project_mountain")
+            }
+          >
+            Source Code
+          </div>
         </div>
-        <div
-          css={btnStyle}
-          onClick={() =>
-            handleOpenNewTab("https://github.com/heisjun/Project_mountain")
-          }
-        >
-          Source Code
-        </div>
+        <MarqueeText direction={1} imgData={ImgData2} isRight={false} />
       </div>
-      <MarqueeText direction={1} imgData={ImgData2} isRight={false} />
       <Footer title="Contact" link="../Contact" />
     </div>
   );
