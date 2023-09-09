@@ -71,7 +71,7 @@ function MarqueeText({
     <div ref={elementRef}>
       <div css={srollcoverStyle(isRight)}>
         {imgData.map((item, idx) => {
-          return <img src={item} css={imgStyle} />;
+          return <img src={item} css={imgStyle} key={idx} />;
         })}
       </div>
     </div>
