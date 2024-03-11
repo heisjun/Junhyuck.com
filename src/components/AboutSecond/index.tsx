@@ -99,6 +99,7 @@ const AboutSecond = () => {
     position: sticky;
     bottom: 0;
     left: 0;
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,9 +139,15 @@ const AboutSecond = () => {
         </div>
         <div css={divBoxStyle} ref={setTargetSecondSection}></div>
       </section>
-      <div css={combinedStyles} onClick={() => navigate("/Web")}>
-        <div css={btnStyle}>더 보러가기</div>
-      </div>
+      <button
+        aria-label="더 보러가기"
+        css={combinedStyles}
+        onClick={() => navigate("/Web")}
+      >
+        <span aria-hidden="true" css={btnStyle}>
+          더 보러가기
+        </span>
+      </button>
     </>
   );
 };

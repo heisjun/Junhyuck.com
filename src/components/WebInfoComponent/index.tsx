@@ -34,9 +34,13 @@ const WebInfoComponent = (props: IWebComponent) => {
         })}
       </div>
       <div css={TextStyle}>{info}</div>
-      <div css={BtnStyle} onClick={() => handleOpenNewTab(`${link}`)}>
+      <button
+        aria-label="자세히 보기 버튼"
+        css={BtnStyle}
+        onClick={() => handleOpenNewTab(`${link}`)}
+      >
         More View
-      </div>
+      </button>
     </div>
   );
 };
@@ -45,6 +49,7 @@ const BtnStyle = css`
   display: inline;
   background-color: black;
   color: white;
+  border: none;
   padding: 10px;
   font-weight: bold;
   font-family: "Chosunilbo_myungjo";

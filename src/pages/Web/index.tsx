@@ -48,7 +48,7 @@ const Web = () => {
               />
             </div>
             <div css={ProjectListBox}>
-              <img src={project.img} css={monitorStyle} />
+              <img src={project.img} css={monitorStyle} alt={project.title} />
             </div>
           </div>
         );

@@ -12,9 +12,13 @@ const Footer = (props: IFooter) => {
   const navigate = useNavigate();
   return (
     <footer css={footerStyle}>
-      <div css={NextBtn} onClick={() => navigate(link)}>
+      <button
+        aria-label={`${title}보러가기 버튼`}
+        css={NextBtn}
+        onClick={() => navigate(link)}
+      >
         {title} 보러가기
-      </div>
+      </button>
     </footer>
   );
 };
@@ -29,6 +33,7 @@ const footerStyle = css`
 
 const NextBtn = css`
   background-color: black;
+  border: none;
   color: white;
   font-size: 30px;
   padding: 20px;
