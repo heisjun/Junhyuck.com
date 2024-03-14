@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import "../../App.css";
 import { css } from "@emotion/react";
 import Footer from "components/Layout/Footer/Footer";
 import Header from "components/Layout/Header/Header";
@@ -139,7 +138,7 @@ const TitleStyle = css`
   margin: 0px;
   font-size: 60px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   @media (max-width: 768px) {
     font-size: 50px;
   }
