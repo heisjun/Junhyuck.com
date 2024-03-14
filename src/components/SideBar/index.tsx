@@ -59,7 +59,7 @@ const SideBarWrap = css`
 
 const ulStyle = css`
   justify-content: end;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Black_Han_Sans";
   font-size: 40px;
   list-style-type: none;
   li {

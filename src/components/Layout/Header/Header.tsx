@@ -52,7 +52,7 @@ const hambugBtnStyle = css`
 `;
 const h2Style = css`
   cursor: pointer;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Black_Han_Sans";
 `;
 const ulStyle = css`
   @media (max-width: 768px) {
@@ -60,7 +60,7 @@ const ulStyle = css`
   }
   display: flex;
   justify-content: end;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Black_Han_Sans";
   font-size: 2vw;
   list-style-type: none;
   li {

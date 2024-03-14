@@ -1,6 +1,23 @@
 @font-face {
     font-family: 'Chosunilbo_myungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    src: url('/src/fonts/Chosunilbo_myungjo.woff') format('woff');
     font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Black_Han_Sans';
+    src: url('/src/fonts/BlackHanSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/src/fonts/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
     font-style: normal;
 }

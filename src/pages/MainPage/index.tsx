@@ -51,7 +51,7 @@ function MainPage() {
     color: white;
     font-size: 5vw;
     font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     ${isInViewport ? fadeInStyles : fadeOutStyles};
     @media (max-width: 768px) {
       font-size: 9vw;
@@ -62,7 +62,7 @@ function MainPage() {
     color: white;
     font-size: 5vw;
     ${isInViewport ? fadeInStyles : fadeOutStyles};
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
     @media (max-width: 768px) {
       font-size: 10vw;
     }

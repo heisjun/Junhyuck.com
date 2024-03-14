@@ -64,7 +64,7 @@ const BtnStyle = css`
 const TitleStyle = css`
   font-size: 40px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 `;
 
 const TextStyle = css`
