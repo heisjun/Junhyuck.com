@@ -26,8 +26,9 @@ const Web = () => {
     <div css={containerStyle}>
       <Header />
       <div css={TitleBlockStyle}>
-        <div css={TitleStyle}>MY</div>
-        <div css={TitleStyle}>WEBSITE</div>
+        <h1 css={TitleStyle}>
+          MY <br /> WEBSITE
+        </h1>
 
         <div css={TextStyle}>
           지금까지 작업했던 사이트 입니다. 식물 커뮤니티 관련 웹사이트,
@@ -97,9 +98,10 @@ const TitleBlockStyle = css`
   }
 `;
 const TitleStyle = css`
+  margin: 0px;
   font-size: 60px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 `;
 
 const TextStyle = css`

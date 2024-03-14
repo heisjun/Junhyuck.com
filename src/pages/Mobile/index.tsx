@@ -86,8 +86,11 @@ const Mobile = () => {
     <div css={containerStyle}>
       <Header />
       <div css={TitleBlockStyle}>
-        <div css={TitleStyle}>MY</div>
-        <div css={TitleStyle}>Application</div>
+        <h1 css={TitleStyle}>
+          MY <br />
+          Application
+        </h1>
+
         <div css={TextStyle}>
           React-Native 를 이용해 프로젝트의 전체적인 화면 레이아웃 구성 로그인
           페이지를 구현했고, Restful API를 이용한 백엔드 서버와 비동기 통신
@@ -133,6 +136,7 @@ const TitleBlockStyle = css`
   }
 `;
 const TitleStyle = css`
+  margin: 0px;
   font-size: 60px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;

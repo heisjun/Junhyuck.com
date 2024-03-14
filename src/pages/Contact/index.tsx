@@ -168,7 +168,7 @@ const Contact = () => {
       <Header />
       <div style={{ position: "absolute" }}>
         <div css={textContainerStyle}>
-          <div css={textStyle}>Contact</div>
+          <h1 css={titleStyle}>Contact</h1>
           <div css={textStyle}>+82 010 2303 9598</div>
           <div css={textStyle}>jun146517@gmail.com</div>
 
@@ -208,10 +208,20 @@ const textContainerStyle = css`
   }
 `;
 
+const titleStyle = css`
+  margin: 0px;
+  font-size: 2.5rem;
+  line-height: 150%;
+  font-family: "Black_Han_Sans";
+  @media (max-width: 768px) {
+    font-size: 7vw;
+  }
+`;
+
 const textStyle = css`
   font-size: 2.5rem;
   line-height: 150%;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Black_Han_Sans";
   @media (max-width: 768px) {
     font-size: 7vw;
   }
