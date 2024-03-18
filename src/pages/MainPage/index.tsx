@@ -69,7 +69,7 @@ function MainPage() {
 
   const logoImgStyle = css`
     position: absolute;
-    width: 30rem; /* 원래 32px */
+    width: 25vw; /* 원래 32px */
     @media (max-width: 768px) {
       width: 60vw; /* 원래 40px */
     }
