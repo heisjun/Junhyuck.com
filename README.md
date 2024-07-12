@@ -1,4 +1,7 @@
 # Junhyuck.com
+<img src="https://github.com/heisjun/Junhyuck.com/blob/main/mainScreen.png?raw=true" width="400" height="auto"/>
+
+
 
 다양한 효과들을 사용한 인터랙티브 & 반응형 웹 포트폴리오 사이트입니다. 웹표준과 웹접근성을 준수하여 개발하였습니다.
 
@@ -13,6 +16,10 @@ React, TypeScript, Emotion, MatterJs
 
 - **페이지 전체적인 레이아웃 디자인 및 기능 구현**
     - [웹 & 모바일에서 사용가능하게 동적페이지 구현](https://www.notion.so/90153c61bac64ea4ab1add2d45032f1f?pvs=21)
+
+      <img src="https://github.com/heisjun/Junhyuck.com/blob/main/%E1%84%87%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BCScreen1.png?raw=true" width="500" height="auto"/>
+      
+      <img src="https://github.com/heisjun/Junhyuck.com/blob/main/%E1%84%87%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%B3%E1%86%BC%E1%84%92%E1%85%A7%E1%86%BCScreen2.png?raw=true" width="200" height="auto"/>
     - [웹 접근성 높이기](https://www.notion.so/10f02e4fb75c4466985e877669aef388?pvs=21)
 - **인터렉티브한 웹개발을 위해 다양한 기능 구현**
     - [Matter Js 를 이용한 2D 물리애니메이션 구현](https://www.notion.so/8bff6ff74aec4b5baa272b2fc0d2512e?pvs=21)
